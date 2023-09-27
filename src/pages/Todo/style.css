@@ -1,0 +1,38 @@
+.todo {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+
+.todo-footer {
+    border-top: 1px solid;
+    background-color:rgba(255, 255, 255, 0.1);
+    padding: 1em 0;
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 1.5em; */
+    gap: 2em;
+    color: white;
+    font-weight: bold;
+
+}
+
+.todo-page {
+    width: 35%;
+}
+/* 
+.todo-page--light {
+
+} */
+
+.todo-page--dark {
+    background-color: black;
+}
+
+.handle-theme-todo button {
+    border: none;
+    background: none;
+}

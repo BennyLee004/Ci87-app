@@ -1,9 +1,12 @@
+import React from 'react'
 
 
-function TodoFooter({todoLeft}) {
+function TodoFooter({unfinished}) {
+
   return (
     <div className='todo-footer'>
-        <span>{`${todoLeft} task left!`}</span>
+        <span>{unfinished} task left</span>
+
     </div>
   )
 }
