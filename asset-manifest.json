@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/deploy-github/static/css/main.c9883f51.css",
-    "main.js": "/deploy-github/static/js/main.6ef32317.js",
-    "static/js/787.c9b7afe3.chunk.js": "/deploy-github/static/js/787.c9b7afe3.chunk.js",
-    "index.html": "/deploy-github/index.html",
-    "main.c9883f51.css.map": "/deploy-github/static/css/main.c9883f51.css.map",
-    "main.6ef32317.js.map": "/deploy-github/static/js/main.6ef32317.js.map",
-    "787.c9b7afe3.chunk.js.map": "/deploy-github/static/js/787.c9b7afe3.chunk.js.map"
+    "main.css": "/Ci87-app/static/css/main.c9883f51.css",
+    "main.js": "/Ci87-app/static/js/main.be0c5e79.js",
+    "static/js/787.c9b7afe3.chunk.js": "/Ci87-app/static/js/787.c9b7afe3.chunk.js",
+    "index.html": "/Ci87-app/index.html",
+    "main.c9883f51.css.map": "/Ci87-app/static/css/main.c9883f51.css.map",
+    "main.be0c5e79.js.map": "/Ci87-app/static/js/main.be0c5e79.js.map",
+    "787.c9b7afe3.chunk.js.map": "/Ci87-app/static/js/787.c9b7afe3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c9883f51.css",
-    "static/js/main.6ef32317.js"
+    "static/js/main.be0c5e79.js"
   ]
 }
