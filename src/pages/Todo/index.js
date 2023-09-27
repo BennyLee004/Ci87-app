@@ -1,50 +1,73 @@
-import TodoList from "../../components/TodoList";
+import React, { useState, useEffect } from "react";
 import TodoHeader from "../../components/TodoHeader";
+import TodoList from "../../components/TodoList";
 import TodoFooter from "../../components/TodoFooter";
 import { TODOS } from "../../data/todo";
-import { useState } from "react";
-function Pages() {
+import "./style.css";
+function Todo() {
   const [todos, setTodos] = useState(TODOS);
+  const [filteredTodos, setFilteredTodos] = useState(TODOS);
+  const unfinished = () => todos.filter((todo) => !todo.isCompleted).length;
 
-  const countTodoLeft = () => todos.filter((todo) => !todo.isCompleted).length;
-  const handleChangeStatus = (id) => {
+  useEffect(() => {
+    setFilteredTodos(todos);
+  }, [todos]);
+
+  const handleChangeState = (id) => {
     setTodos(
       todos.map((todo) => {
         if (todo.id === id) {
           todo.isCompleted = !todo.isCompleted;
-          // console.log(todo)
         }
         return todo;
       })
     );
-    // console.log(id)
   };
+
   const addTodo = (todo) => {
-    setTodos((prev) => [...prev, todo])
-  }
+    setTodos((todos) => [...todos, todo]);
+  };
 
   const editTodo = (id, text) => {
-    const newTodo = todos.map(todo => {
+    const newTodos = todos.map((todo) => {
       if (todo.id === id) {
         todo.text = text;
       }
       return todo;
     });
-    setTodos(newTodo)
-  }
+    setTodos(newTodos);
+  };
+
+  const handleFilterByStatus = (status) => {
+    if (status === "active") {
+      setFilteredTodos(todos.filter((todo) => todo.isCompleted === false));
+    } else if (status === "completed") {
+      setFilteredTodos(todos.filter((todo) => todo.isCompleted === true));
+    } else {
+      setFilteredTodos(todos);
+    }
+  };
+
+  const handleDeletedTodo = (id) => {
+    const newTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(newTodos);
+  };
+
   return (
     <div className="todo-page">
-      <TodoHeader
-        addTodo={addTodo} 
-      />
-      <TodoList 
-        todos={todos} 
-        handleChangeStatus={handleChangeStatus}
+      <TodoList
+        todos={filteredTodos}
+        handleChangeState={handleChangeState}
         editTodo={editTodo}
+        handleDeletedTodo={handleDeletedTodo}
+        handleFilterByStatus={handleFilterByStatus}
       />
-      <TodoFooter todoLeft={countTodoLeft()} />
+
+      <TodoHeader addTodo={addTodo} />
+
+      <TodoFooter unfinished={unfinished()} />
     </div>
   );
 }
 
-export default Pages;
+export default Todo;

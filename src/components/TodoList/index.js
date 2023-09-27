@@ -1,31 +1,32 @@
-import Todo from "../Todo";
-import { useState } from "react";
-function TodoList({ todos: todosProps, editTodo, handleChangeStatus }) {
-  const [todos, setTodos] = useState(todosProps);
 
-  const handleFilterByStatus = (status) => {
-    if (status === "active") {
-      setTodos(todosProps.filter((todo) => todo.isCompleted === false));
-    } else if (status === "completed") {
-      console.log(todosProps);
-      setTodos(todosProps.filter((todo) => todo.isCompleted === true));
-    } else {
-      setTodos(todosProps);
-    }
-  };
+import Todo from "../Todo";
+import "./style.css";
+function TodoList({
+  todos,
+  handleChangeState,
+  editTodo,
+  handleDeletedTodo,
+  handleFilterByStatus,
+}) {
+  console.log(todos);
   return (
     <div className="todo-list">
-      <select onChange={(event) => handleFilterByStatus(event.target.value)}>
-        <option value="all">All</option>
-        <option value="active">Active</option>
-        <option value="completed">Completed</option>
-      </select>
+      <div>
+        <p>Task</p>
+        <select onChange={(event) => handleFilterByStatus(event.target.value)}>
+          <option value={"all"}>All</option>
+          <option value={"active"}>Active</option>
+          <option value={"completed"}>Completed</option>
+        </select>
+      </div>
+      <hr style={{ color: "white", marginBottom: "1em" }} />
       {todos.map((todo) => (
-        <Todo 
-            key={todo.id} 
-            todo={todo} 
-            handleChangeStatus={handleChangeStatus} 
-            editTodo={editTodo}
+        <Todo
+          key={todo.id}
+          todo={todo}
+          handleChangeState={handleChangeState}
+          editTodo={editTodo}
+          handleDeletedTodo={handleDeletedTodo}
         />
       ))}
     </div>
