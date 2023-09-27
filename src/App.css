@@ -1,8 +1,15 @@
-.App {
+.handle-theme-todo {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+.handle-theme-todo-page--pink {
   background-color: #BA4849;
+}
+
+.handle-theme-todo-page--dark {
+  background-color: black;
 }
