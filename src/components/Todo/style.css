@@ -1,45 +1,45 @@
 .todo-text-completed {
-    text-decoration: line-through;
-    opacity: 0.5;
+  text-decoration: line-through;
+  opacity: 0.5;
 }
 
 .todo-text button {
-    margin-left: 1em;
-    border: none;
-    background:none;
-    padding: 0;
+  margin-left: 1em;
+  border: none;
+  background: none;
+  padding: 0;
 }
 
 .todo-m {
-    display: flex;
-    gap: 0.8em;
-    color: #333333;
-    font-weight: 600;
-    background-color: white;
-    margin-top: 0.5em;
-    padding: 0.8em 1em;
-    border-radius: 5px;
-    justify-content: space-between;
+  display: flex;
+  gap: 0.8em;
+  color: #333333;
+  font-weight: 600;
+  background-color: white;
+  margin-top: 0.5em;
+  padding: 0.8em 1em;
+  border-radius: 5px;
+  justify-content: space-between;
 }
 
 .todo-m span {
-    color: gray;
+  color: gray;
 
-    letter-spacing: 1.5px;
-    font-weight: 700;
+  letter-spacing: 1.5px;
+  font-weight: 700;
 }
 .todo-m span span {
-    font-size: 0.8em;
-    opacity: 0.8;
+  font-size: 0.8em;
+  opacity: 0.8;
 }
 
 .todo-m div {
-    display: flex;
-    gap: 0.7em;
+  display: flex;
+  gap: 0.7em;
 }
 .todo-m div:last-child button {
-    border: 0.8px solid rgb(158, 154, 154);
-    border-radius: 4px;
-    padding: 3px 4px 0 ;
-    background-color: white;
+  border: 0.8px solid rgb(158, 154, 154);
+  border-radius: 4px;
+  padding: 3px 4px 0;
+  background-color: white;
 }

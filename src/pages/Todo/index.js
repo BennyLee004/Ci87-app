@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import ThemeContext from "../../contexts/ThemeContext";
 import TodoHeader from "../../components/TodoHeader";
 import TodoList from "../../components/TodoList";
 import TodoFooter from "../../components/TodoFooter";
@@ -53,19 +54,25 @@ function Todo() {
     setTodos(newTodos);
   };
 
+  const themeContext = useContext(ThemeContext);
+  const todoPageClassName = `handle-theme-todo ${
+    themeContext.theme === "light"
+      ? "handle-theme-todo-page--pink"
+      : "handle-theme-todo-page--dark"
+  }`;
   return (
-    <div className="todo-page">
-      <TodoList
-        todos={filteredTodos}
-        handleChangeState={handleChangeState}
-        editTodo={editTodo}
-        handleDeletedTodo={handleDeletedTodo}
-        handleFilterByStatus={handleFilterByStatus}
-      />
-
-      <TodoHeader addTodo={addTodo} />
-
-      <TodoFooter unfinished={unfinished()} />
+    <div className={todoPageClassName}>
+      <div className="reponsive-todo-page">
+        <TodoList
+          todos={filteredTodos}
+          handleChangeState={handleChangeState}
+          editTodo={editTodo}
+          handleDeletedTodo={handleDeletedTodo}
+          handleFilterByStatus={handleFilterByStatus}
+        />
+        <TodoHeader addTodo={addTodo} />
+        <TodoFooter unfinished={unfinished()} />
+      </div>
     </div>
   );
 }

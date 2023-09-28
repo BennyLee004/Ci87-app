@@ -9,7 +9,6 @@ function TodoHeader({ addTodo }) {
 
   const [estPomodoros, setEstPomodoros] = useState(0);
 
-
   const handleCLickSave = () => {
     if (text !== "") {
       const newTodo = {
