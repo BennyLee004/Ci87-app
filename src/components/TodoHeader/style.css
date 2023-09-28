@@ -1,111 +1,106 @@
-
 .todo-header input:focus {
-    outline: none;
+  outline: none;
 }
 
 .todo-header input {
-    border: none;
-    font-size: 1.4em;
-    width:100%;
-    margin-bottom: 1.5em;
-
+  border: none;
+  font-size: 1.4em;
+  width: 100%;
+  margin-bottom: 1.5em;
 }
 
 .todo-header input::placeholder {
-    color: #DDDDDD;
-    font-style: italic;
+  color: #dddddd;
+  font-style: italic;
 }
 
 .btn-click-add-todo {
-    display: flex;
-    justify-content: center;
-    border:1px dashed;
-    border-color: white ;
-    align-items: center;
-    gap: 5px;
-    opacity: 0.8;
-    padding: 1em;
-    border-radius: 8px;
-    color: white;
-    font-weight: bold;
-    font-size: 0.9em;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  border: 1px dashed;
+  border-color: white;
+  align-items: center;
+  gap: 5px;
+  opacity: 0.8;
+  padding: 1em;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9em;
+  cursor: pointer;
 }
 
 .btn-click-add-todo:hover {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 
 .btn-add-todo {
-    background-color: white;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
-    padding: 2em 1em;
-    width: 100%;
+  background-color: white;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  padding: 2em 1em;
+  width: 100%;
 }
 
 .btn-cancel-save {
-    background-color: #EFEFEF;
-    display: flex;
-    justify-content:end;
-    gap: 1em;
-    padding: 0.8em 1em;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    width: 100%;
+  background-color: #efefef;
+  display: flex;
+  justify-content: end;
+  gap: 1em;
+  padding: 0.8em 1em;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  width: 100%;
 }
 
 .btn-cancel-save button {
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
 }
 .btn-cancel-save button:first-child {
-    color: #929292;
-    opacity: 0.9;
+  color: #929292;
+  opacity: 0.9;
 }
 
 .btn-cancel-save button:last-child {
-    background-color: #363636;
-    color: #FDFDFD;
-    padding: 0.6em 1em;
-    border-radius: 5px;
-    opacity: 0.9;
-
+  background-color: #363636;
+  color: #fdfdfd;
+  padding: 0.6em 1em;
+  border-radius: 5px;
+  opacity: 0.9;
 }
 
 .btn-cancel-save button:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
-input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-  }
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 
 .btn-incre-descre {
-    display: flex;
-    justify-content: flex-start;
-    gap: 0.2em;
-    margin-top: 1em;
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.2em;
+  margin-top: 1em;
 }
 
 .btn-incre-descre .type-text-todo {
-    width: 15% !important;
-    background-color: #EFEFEF;
-    margin-bottom: 0;
-    border-radius: 5px ;
-    font-size: 1em;
-    padding-left: 5px;
+  width: 15% !important;
+  background-color: #efefef;
+  margin-bottom: 0;
+  border-radius: 5px;
+  font-size: 1em;
+  padding-left: 5px;
 }
 
 .btn-incre-descre button {
-    background-color:#ffff;
-    border: 1.5px solid #EFEFEF;
-    border-radius: 5px;
+  background-color: #ffff;
+  border: 1.5px solid #efefef;
+  border-radius: 5px;
 }
 
 .todo-header {
-    margin-top: 1em;
-
+  margin-top: 1em;
 }

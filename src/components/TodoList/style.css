@@ -1,19 +1,19 @@
 .todo-list p {
-    font-weight: bold;
-    color: white;
+  font-weight: bold;
+  color: white;
 
-    margin: 0;
+  margin: 0;
 }
 
 .todo-list div {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .todo-list div select {
-    border: none;
-    border-radius: 5px;
+  border: none;
+  border-radius: 5px;
 }
 
 .todo-list div select option {
-    background-color: white;
+  background-color: white;
 }
