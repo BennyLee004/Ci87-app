@@ -1,13 +1,31 @@
 import React, { useState, useEffect, useContext } from "react";
+import axios from "axios";
+
 import ThemeContext from "../../contexts/ThemeContext";
-import TodoHeader from "../../components/TodoHeader";
-import TodoList from "../../components/TodoList";
-import TodoFooter from "../../components/TodoFooter";
+import TodoHeader from "./components/TodoHeader";
+import TodoList from "./components/TodoList";
+import TodoFooter from "./components/TodoFooter";
 import { TODOS } from "../../data/todo";
+
 import "./style.css";
 function Todo() {
-  const [todos, setTodos] = useState(TODOS);
-  const [filteredTodos, setFilteredTodos] = useState(TODOS);
+  // const [data, setData] = useState(TODOS);
+  // const [todos, setTodos] = useState(TODOS);
+
+  const [todos, setTodos] = useState([]);
+  const [filteredTodos, setFilteredTodos] = useState([]);
+
+  useEffect(() => {
+    const fetchTodo = async () => {
+      const response = await axios.get(
+        "https://6516937509e3260018c9f2a4.mockapi.io/task");
+    
+      setTodos(response.data);
+      setFilteredTodos(response.data)
+    };
+    fetchTodo();  
+  }, []);
+
   const unfinished = () => todos.filter((todo) => !todo.isCompleted).length;
 
   useEffect(() => {
